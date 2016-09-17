@@ -1,4 +1,4 @@
-# PasswordRulesHelper 1.0.3
+# PasswordRulesHelper 1.0.5
 
 # Introduction
 
