@@ -5,6 +5,8 @@
 _passwordRulesHelper_ is a JQuery plugin to help users to indicate a right password in your form.
 There are 5 defaults rules, but you can add custom's rules.
 
+https://codepen.io/Nirysse/pen/KgrJEN
+
 # Installing
 
 https://www.npmjs.com/package/passwordruleshelper
