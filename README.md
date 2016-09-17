@@ -7,6 +7,10 @@ There are 5 defaults rules, but you can add custom's rules.
 
 # Installing
 
+```
+npm install passwordruleshelper
+```
+
 ### Step 1 : Link required files
 
 ```html
