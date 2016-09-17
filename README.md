@@ -1,4 +1,4 @@
-# PasswordRulesHelper 1.0.0
+# PasswordRulesHelper 1.0.1
 
 # Introduction
 
@@ -6,6 +6,8 @@ _passwordRulesHelper_ is a JQuery plugin to help users to indicate a right passw
 There are 5 defaults rules, but you can add custom's rules.
 
 # Installing
+
+https://www.npmjs.com/package/passwordruleshelper
 
 ```
 npm install passwordruleshelper
