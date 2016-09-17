@@ -1,0 +1,29 @@
+{
+  "name": "passwordruleshelper",
+  "version": "1.0.0",
+  "description": "JQuery plugin Rules Helper for password",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nirysse/passwordRulesHelper.git"
+  },
+  "keywords": [
+    "jquery",
+    "password",
+    "helper",
+    "validator",
+    "plugin"
+  ],
+  "author": {
+    "name": "Elsa Villemagne",
+    "email": "elsa.villemagne@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nirysse/passwordRulesHelper/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",    
+    "jquery": "^3.1.0"
+  }
+}

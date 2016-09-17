@@ -1,0 +1,4 @@
+$(function() {
+    $('#passwordField').passwordRulesValidator();
+});
+
