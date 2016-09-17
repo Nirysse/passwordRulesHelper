@@ -1,0 +1,106 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\node\\node.exe',
+1 verbose cli   'D:\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'D:\\wamp64\\www\\passwordRulesHelper',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Za\AppData\Roaming\npm-cache\passwordruleshelper\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\Za\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 verbose tar pack [ 'C:\\Users\\Za\\AppData\\Roaming\\npm-cache\\passwordruleshelper\\1.0.0\\package.tgz',
+10 verbose tar pack   'D:\\wamp64\\www\\passwordRulesHelper' ]
+11 verbose tarball C:\Users\Za\AppData\Roaming\npm-cache\passwordruleshelper\1.0.0\package.tgz
+12 verbose folder D:\wamp64\www\passwordRulesHelper
+13 info prepublish passwordruleshelper@1.0.0
+14 verbose addLocalTarball adding from inside cache C:\Users\Za\AppData\Roaming\npm-cache\passwordruleshelper\1.0.0\package.tgz
+15 verbose correctMkdir C:\Users\Za\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+16 silly cache afterAdd passwordruleshelper@1.0.0
+17 verbose afterAdd C:\Users\Za\AppData\Roaming\npm-cache\passwordruleshelper\1.0.0\package\package.json not in flight; writing
+18 verbose correctMkdir C:\Users\Za\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+19 verbose afterAdd C:\Users\Za\AppData\Roaming\npm-cache\passwordruleshelper\1.0.0\package\package.json written
+20 silly publish { name: 'passwordruleshelper',
+20 silly publish   version: '1.0.0',
+20 silly publish   description: 'JQuery plugin Rules Helper for password',
+20 silly publish   repository:
+20 silly publish    { type: 'git',
+20 silly publish      url: 'git+https://github.com/Nirysse/passwordRulesHelper.git' },
+20 silly publish   keywords: [ 'jquery', 'password', 'helper', 'validator', 'plugin' ],
+20 silly publish   author: { name: 'Elsa Villemagne', email: 'elsa.villemagne@gmail.com' },
+20 silly publish   license: { type: 'MIT', url: 'http://opensource.org/licenses/MIT' },
+20 silly publish   bugs: { url: 'https://github.com/Nirysse/passwordRulesHelper/issues' },
+20 silly publish   dependencies: { 'font-awesome': '^4.6.3', jquery: '^3.1.0' },
+20 silly publish   readme: '# PasswordRulesHelper 1.0.0\r\n\r\n# Introduction\r\n\r\n_passwordRulesHelper_ is a JQuery plugin to help users to indicate a right password in your form.\r\nThere are 5 defaults rules, but you can add custom\'s rules.\r\n\r\n# Installing\r\n\r\n```\r\nnpm install passwordruleshelper\r\n```\r\n\r\n### Step 1 : Link required files\r\n\r\n```html\r\n<!-- jQuery library (served from Google) -->\r\n<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>\r\n<!-- passwordRulesHelper Javascript file -->\r\n<script src="dist/js/passwordRulesHelper.min.js"></script>\r\n<!-- passwordRulesHelper CSS file -->\r\n<link href="/dist/css/passwordRulesHelper.min.css" rel="stylesheet" />\r\n```\r\n\r\n### Step 2 : Create HTML\r\n\r\n```html\r\n<input type=\'password\' name=\'passwordField\' id=\'passwordField\'/>\r\n```\r\n\r\n### Step 3 : Call the PasswordRulesHelper\r\n\r\n```javascript\r\n$(function() {\r\n    $(\'#passwordField\').passwordRulesValidator();\r\n});\r\n```\r\n\r\n##Configuration options\r\n\r\n**rules**\r\nArray where are all rules for password.\r\n\r\nThere are 5 rules already initialize : \r\n\r\n```\r\n\'rules\' : {\r\n    \'length\' : {\r\n        \'regex\': \'.{8,}\',\r\n        \'name\': \'length\',\r\n        \'message\': \'8 characters\',\r\n        \'enable\': true\r\n    },\r\n    \'lowercase\' :{\r\n        \'regex\': \'[a-z]{1,}\',\r\n        \'name\': \'lowercase\',\r\n        \'message\': \'1 lowercase\',\r\n        \'enable\': true\r\n    },\r\n    \'uppercase\' : {\r\n        \'regex\': \'[A-Z]{1,}\',\r\n        \'name\': \'uppercase\',\r\n        \'message\': \'1 uppercase\',\r\n        \'enable\': true\r\n    },\r\n    \'number\' : {\r\n        \'regex\': \'[0-9]{1,}\',\r\n        \'name\': \'number\',\r\n        \'message\': \'1 digit\',\r\n        \'enable\': true\r\n    },\r\n    \'specialChar\' : {\r\n        \'regex\': \'[^a-zA-Z0-9]{1,}\',\r\n        \'name\': \'special-char\',\r\n        \'message\': \'1 special character\',\r\n        \'enable\': true\r\n    }\r\n}\r\n```\r\nYou can add your own rules and change parmeters of existing rules.\r\n\r\n\r\n**msgRules**\r\nIt\'s the message which displays above rules.\r\n\r\n```\r\ndefault: \'Your password must contain :\'\r\n```\r\n\r\n**container**\r\n\r\nThe container where rules are display. If not specified, container was created under the password\'s field.\r\nAn object is expected.\r\n\r\n```\r\ndefault : null\r\nexample : container : $(\'#myCustomContainer\')\r\n```\r\n\r\n**containerClass**\r\n\r\nAdd class to container.\r\n\r\n```\r\ndefault : null\r\nexample : containerClass : \'class\'\r\n```\r\n\r\n**containerId**\r\n\r\nChange id of container.\r\n\r\n```\r\ndefault : \'checkRulesList\'\r\nexample : containerId : \'newId\'\r\n```\r\n\r\n**okClass**\r\n\r\nAdd class to validate rules.\r\n\r\n```\r\ndefault : null\r\nexample : okClass : \'class\'\r\n```\r\n\r\n**koClass**\r\n\r\nAdd class to invalid rules.\r\n\r\n```\r\ndefault : null\r\nexample : koClass : \'class\'\r\n```\r\n\r\n**onLoad**\r\n\r\nExecutes before initialize PasswordRulesHelper\r\n\r\n```\r\ndefault : null\r\nexample : onLoad : function(){}\r\n```\r\n\r\n\r\n# Changelog\r\n\r\n# License\r\n\r\nReleased under the MIT license - http://opensource.org/licenses/MIT\r\n\r\nLet\'s get on with it!\r\n\r\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: 'e26318c72fc510a5f425080c518491748d70fce5',
+20 silly publish   homepage: 'https://github.com/Nirysse/passwordRulesHelper#readme',
+20 silly publish   _id: 'passwordruleshelper@1.0.0',
+20 silly publish   scripts: {},
+20 silly publish   _shasum: '34df4228c964c0ae296314b0c43ec2e70e27b9a4',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name passwordruleshelper
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'passwordruleshelper',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'passwordruleshelper',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/passwordruleshelper
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading C:\Users\Za\AppData\Roaming\npm-cache\passwordruleshelper\1.0.0\package.tgz
+29 verbose request uri https://registry.npmjs.org/passwordruleshelper
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 22:39:44
+32 verbose request using bearer token for auth
+33 verbose request id 198ac3ee4ad14aa0
+34 http request PUT https://registry.npmjs.org/passwordruleshelper
+35 http 403 https://registry.npmjs.org/passwordruleshelper
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Sat, 17 Sep 2016 20:39:47 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1474144786.123110,VS0,VE1110',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating C:\Users\Za\AppData\Roaming\npm-cache\registry.npmjs.org\passwordruleshelper on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : passwordruleshelper
+39 verbose stack     at makeError (D:\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (D:\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+39 verbose stack     at Request._callback (D:\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+39 verbose stack     at Request.self.callback (D:\node\node_modules\npm\node_modules\request\request.js:200:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (D:\node\node_modules\npm\node_modules\request\request.js:1067:10)
+39 verbose stack     at emitOne (events.js:82:20)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (D:\node\node_modules\npm\node_modules\request\request.js:988:12)
+40 verbose statusCode 403
+41 verbose pkgid passwordruleshelper
+42 verbose cwd D:\wamp64\www\passwordRulesHelper
+43 error Windows_NT 10.0.10586
+44 error argv "D:\\node\\node.exe" "D:\\node\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+45 error node v4.5.0
+46 error npm  v2.15.9
+47 error code E403
+48 error "You cannot publish over the previously published version 1.0.0." : passwordruleshelper
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
