@@ -1,4 +1,4 @@
-# PasswordRulesHelper 1.0.5
+# PasswordRulesHelper 1.0.6
 
 # Introduction
 
@@ -19,7 +19,7 @@ npm install passwordruleshelper
 
 ```html
 <!-- jQuery library (served from Google) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- passwordRulesHelper Javascript file -->
 <script src="dist/js/passwordRulesHelper.min.js"></script>
 <!-- passwordRulesHelper CSS file -->
